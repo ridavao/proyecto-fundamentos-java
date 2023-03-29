@@ -2,13 +2,13 @@
 package com.gm.mundopc;
 
 public class Monitor {
-    private int idMonitor;
+    private final int idMonitor;
     private String marca;
     private double tamanio;
-    private int contadorMonitores;
+    private static int contadorMonitores;
     
-    public Monitor(){
-        this.idMonitor = ++this.contadorMonitores;
+    private Monitor(){
+        this.idMonitor = ++Monitor.contadorMonitores;
     }
     
     public Monitor(String marca, double tamanio){
@@ -19,10 +19,6 @@ public class Monitor {
 
     public int getIdMonitor() {
         return idMonitor;
-    }
-
-    public void setIdMonitor(int idMonitor) {
-        this.idMonitor = idMonitor;
     }
 
     public String getMarca() {
@@ -41,14 +37,6 @@ public class Monitor {
         this.tamanio = tamanio;
     }
 
-    public int getContadorMonitores() {
-        return contadorMonitores;
-    }
-
-    public void setContadorMonitores(int contadorMonitores) {
-        this.contadorMonitores = contadorMonitores;
-    }
-
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -58,6 +46,5 @@ public class Monitor {
         sb.append('}');
         return sb.toString();
     }
-    
     
 }

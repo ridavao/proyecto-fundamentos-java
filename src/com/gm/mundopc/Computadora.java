@@ -2,15 +2,15 @@
 package com.gm.mundopc;
 
 public class Computadora {
-    private int idComputadora;
+    private final int idComputadora;
     private String nombre;
     private Monitor monitor;
     private Teclado teclado;
     private Raton raton;
-    private int contadorComputadoras;
+    private static int contadorComputadoras;
     
-    public Computadora(){
-        this.idComputadora = ++this.contadorComputadoras;
+    private Computadora(){
+        this.idComputadora = ++Computadora.contadorComputadoras;
     }
     
     public Computadora(String nombre, Monitor monitor, Teclado teclado, Raton raton){
@@ -19,18 +19,10 @@ public class Computadora {
         this.monitor = monitor;
         this.teclado = teclado;
         this.raton = raton;
-//        this.monitor = new Monitor("4K", this.contadorComputadoras);
-//        this.teclado = new Teclado("USB", "Teclado Dragon");
-//        this.raton = new Raton("USB", "Mouse Gamer");
-        
     }
 
     public int getIdComputadora() {
         return this.idComputadora;
-    }
-
-    public void setIdComputadora(int idComputadora) {
-        this.idComputadora = idComputadora;
     }
 
     public String getNombre() {
@@ -65,15 +57,6 @@ public class Computadora {
         this.raton = raton;
     }
 
-    public int getContadorComputadoras() {
-        return this.contadorComputadoras;
-    }
-
-    public void setContadorComputadoras(int contadorComputadoras) {
-        this.contadorComputadoras = contadorComputadoras;
-    }
-    
-
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -82,7 +65,6 @@ public class Computadora {
         sb.append(", monitor=").append(monitor);
         sb.append(", teclado=").append(teclado);
         sb.append(", raton=").append(raton);
-        sb.append(", contadorComputadoras=").append(contadorComputadoras);
         sb.append('}');
         return sb.toString();
     }
