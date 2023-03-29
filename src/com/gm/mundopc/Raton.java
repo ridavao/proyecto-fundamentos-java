@@ -14,6 +14,7 @@ public class Raton extends DispositivoEntrada{
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("Raton{idRaton=").append(idRaton);
+        sb.append(", ").append(super.toString());
         sb.append(", contadorRatones=").append(contadorRatones);
         sb.append('}');
         return sb.toString();

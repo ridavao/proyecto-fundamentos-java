@@ -10,7 +10,7 @@ public class Computadora {
     private int contadorComputadoras;
     
     public Computadora(){
-        this.idComputadora = ++this.idComputadora;
+        this.idComputadora = ++this.contadorComputadoras;
     }
     
     public Computadora(String nombre, Monitor monitor, Teclado teclado, Raton raton){
@@ -19,6 +19,10 @@ public class Computadora {
         this.monitor = monitor;
         this.teclado = teclado;
         this.raton = raton;
+//        this.monitor = new Monitor("4K", this.contadorComputadoras);
+//        this.teclado = new Teclado("USB", "Teclado Dragon");
+//        this.raton = new Raton("USB", "Mouse Gamer");
+        
     }
 
     public int getIdComputadora() {

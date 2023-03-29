@@ -14,6 +14,7 @@ public class Teclado extends DispositivoEntrada{
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("Teclado{idTeclado=").append(idTeclado);
+        sb.append(", ").append(super.toString());
         sb.append(", contadorTeclados=").append(contadorTeclados);
         sb.append('}');
         return sb.toString();
