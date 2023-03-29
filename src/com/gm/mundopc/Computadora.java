@@ -21,6 +21,55 @@ public class Computadora {
         this.raton = raton;
     }
 
+    public int getIdComputadora() {
+        return this.idComputadora;
+    }
+
+    public void setIdComputadora(int idComputadora) {
+        this.idComputadora = idComputadora;
+    }
+
+    public String getNombre() {
+        return this.nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public Monitor getMonitor() {
+        return this.monitor;
+    }
+
+    public void setMonitor(Monitor monitor) {
+        this.monitor = monitor;
+    }
+
+    public Teclado getTeclado() {
+        return this.teclado;
+    }
+
+    public void setTeclado(Teclado teclado) {
+        this.teclado = teclado;
+    }
+
+    public Raton getRaton() {
+        return this.raton;
+    }
+
+    public void setRaton(Raton raton) {
+        this.raton = raton;
+    }
+
+    public int getContadorComputadoras() {
+        return this.contadorComputadoras;
+    }
+
+    public void setContadorComputadoras(int contadorComputadoras) {
+        this.contadorComputadoras = contadorComputadoras;
+    }
+    
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
